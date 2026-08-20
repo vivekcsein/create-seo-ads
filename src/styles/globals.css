@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@import "./theme/tweakcn-theme.css";
+@import "./utils/base.css";
+@import "./utils/effects.css";
