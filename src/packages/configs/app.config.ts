@@ -55,16 +55,46 @@ export const appConfig = Object.freeze({
   keywords: [
     // Brand keywords
     "Vivekcse",
-    "Vivekcse",
     "@vivekcse",
+
     // core keywords
     "seo",
     "ads",
     "marketing",
-    "seo marketing",
-    "seo ads",
-    "marketing seo",
-    "marketing ads",
+    "social media marketing",
+    "digital marketing",
+    "search engine optimization",
+    "ppc",
+    "google ads",
+    "facebook ads",
+    "media.net ads",
+    "linkedin ads",
+    "online advertising",
+    "sem",
+
+    // landing pages & paid campaigns
+    "seo services for small business",
+    "hire seo expert for website",
+    "google ads management for ecommerce",
+    "local seo services near me",
+    "affordable ppc management",
+    "seo and ads package for startups",
+    "increase website traffic with seo and ads",
+    "seo audit and google ads setup",
+    "best seo company for lead generation",
+    "ecommerce seo and paid ads services",
+
+    // Service‑specific / Commercial (conversion-focused)
+    "seo audit service",
+    "on page seo services",
+    "technical seo consultant",
+    "local seo optimization",
+    "google ads campaign setup",
+    "facebook ads management",
+    "remarketing ads setup",
+    "landing page conversion optimization",
+    "adwords management service",
+    "seo + ppc management",
   ],
 });
 

@@ -1,6 +1,166 @@
-.global-blogs-layout {
+:root {
+  --header-height: 80px;
+
+  --ads-rail-width: 160px;
+  --ads-layout-gap: 24px;
+
+  --content-min-width: 720px;
+  --content-max-width: 1000px;
+
+  --layout-padding-x: 16px;
+  --layout-padding-y: 24px;
+}
+
+/* =========================================================
+   PAGE LAYOUT
+   ========================================================= */
+
+.ads-page-layout {
+  position: relative;
+
   width: 100%;
-  max-width: 100%;
+  min-height: calc(100svh - var(--header-height));
+
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: var(--layout-padding-y) var(--layout-padding-x);
+
+  display: grid;
+
+  grid-template-columns: var(--ads-rail-width) minmax(0, 1fr) var(
+      --ads-rail-width
+    );
+
+  gap: var(--ads-layout-gap);
+
+  align-items: start;
+}
+
+/* =========================================================
+   MAIN CONTENT COLUMN
+   ========================================================= */
+
+.ads-page-layout__content {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/*
+ * This is the actual blog/content width.
+ *
+ * Minimum: 720px
+ * Maximum: 1000px
+ */
+
+.ads-page-layout__content-inner {
+  width: 100%;
+  min-width: var(--content-min-width);
+  max-width: var(--content-max-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   AD RAIL
+   ========================================================= */
+
+.ad-rail {
+  width: var(--ads-rail-width);
+  min-width: var(--ads-rail-width);
+  max-width: var(--ads-rail-width);
+  height: 100%;
+}
+
+/* =========================================================
+   STICKY AD
+   ========================================================= */
+
+.ad-rail__sticky {
+  position: sticky;
+
+  /*
+   * Header is fixed at 80px.
+   * Keep the ad below the header.
+   */
+  top: calc(var(--header-height) + 24px);
+
+  width: var(--ads-rail-width);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* =========================================================
+   LEFT RAIL
+   ========================================================= */
+
+.ad-rail--left {
+  justify-self: start;
+}
+
+/* =========================================================
+   RIGHT RAIL
+   ========================================================= */
+
+.ad-rail--right {
+  justify-self: end;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1600px) {
+  .ads-page-layout {
+    max-width: 1600px;
+  }
+}
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   ========================================================= */
+
+/*
+ * 720px content + 160px + 160px rails
+ * + gaps + padding needs roughly 1110px.
+ *
+ * Below this, remove ads rather than squeeze the article.
+ */
+
+@media (max-width: 1199px) {
+  .ads-page-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ad-rail {
+    display: none;
+  }
+
+  .ads-page-layout__content {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .ads-page-layout {
+    padding: 16px 12px;
+  }
+
+  .ads-page-layout__content-inner {
+    min-width: 0;
+    max-width: 100%;
+  }
 }

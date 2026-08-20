@@ -39,7 +39,8 @@ if (!parsedAdsEnv.success) {
 export const envAdsConfig = Object.freeze({
   enabled: parsedAdsEnv.data.NEXT_PUBLIC_ADSENSE_ENABLED === "true",
 
-  MEDIANET_ADS_ENABLED: parsedAdsEnv.data.NEXT_PUBLIC_MEDIANET_ADS_ENABLED === "true",
+  MEDIANET_ADS_ENABLED:
+    parsedAdsEnv.data.NEXT_PUBLIC_MEDIANET_ADS_ENABLED === "true",
 
   MEDIANET_CID: parsedAdsEnv.data.NEXT_PUBLIC_MEDIANET_CID || undefined,
   MEDIANET_LEFT_CRID:
@@ -47,7 +48,8 @@ export const envAdsConfig = Object.freeze({
   MEDIANET_RIGHT_CRID:
     parsedAdsEnv.data.NEXT_PUBLIC_MEDIANET_RIGHT_CRID || undefined,
 
-  GOOGLE_ADS_ENABLED: parsedAdsEnv.data.NEXT_PUBLIC_GOOGLE_ADS_ENABLED === "true",
+  GOOGLE_ADS_ENABLED:
+    parsedAdsEnv.data.NEXT_PUBLIC_GOOGLE_ADS_ENABLED === "true",
   GOOGLE_ADSENSE_CLIENT_ID:
     parsedAdsEnv.data.NEXT_PUBLIC_ADSENSE_CLIENT_ID || undefined,
   GOOGLE_ADSENSE_SIDEBAR_LEFT_SLOT:

@@ -1,9 +1,11 @@
+import "@/styles/globals.css";
 import type { Metadata } from "next";
+import Script from "next/script";
+import { GoogleAdsScript } from "@/components/features/ads-sense/google-ads";
+import { MediaNetScript } from "@/components/features/ads-sense/media-net";
 import AppClientLayout from "@/components/layouts/AppClientLayout";
 import { monoFont, sansFont, serifFont } from "@/packages/configs/fonts.config";
 import { seoConfig } from "@/packages/seo/seo.config";
-import "@/styles/globals.css";
-import Script from "next/script";
 import { themeInitScript } from "@/packages/utils/apply-theme";
 
 export const metadata: Metadata = seoConfig;
@@ -20,6 +22,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Script id="theme-init" strategy="beforeInteractive">
           {themeInitScript}
         </Script>
+        <GoogleAdsScript />
+        <MediaNetScript />
       </head>
       <body className="min-h-full flex flex-col">
         <AppClientLayout>{children}</AppClientLayout>

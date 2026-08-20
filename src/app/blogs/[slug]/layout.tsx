@@ -1,7 +1,7 @@
 import { AdsPageLayout } from "@/components/layouts/AdsPageLayout";
 
-const BlogsLayout = ({ children }: { children: React.ReactNode }) => {
+const BlogSlugLayout = ({ children }: { children: React.ReactNode }) => {
   return <AdsPageLayout>{children}</AdsPageLayout>;
 };
 
-export default BlogsLayout;
+export default BlogSlugLayout;

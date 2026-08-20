@@ -58,7 +58,6 @@ body {
  * "smooth dark-mode toggle" feel at a fraction of the cost.
  */
 body,
-button,
 input,
 textarea,
 select,
@@ -94,7 +93,7 @@ h6 {
   font-weight: 600;
   line-height: var(--lh-tight);
   text-wrap: pretty;
-  color: var(--foreground);
+  color: var(--primary);
   margin-bottom: 0.25em;
 }
 
@@ -162,7 +161,7 @@ blockquote {
 
 /* Limit text width for better reading */
 .prose {
-  max-width: 65ch;
+  max-width: 80ch;
 }
 
 /* MOBILE TWEAKS (ONLY WHERE NEEDED) */
