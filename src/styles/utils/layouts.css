@@ -26,9 +26,7 @@
 
   display: grid;
 
-  grid-template-columns: var(--ads-rail-width) minmax(0, 1fr) var(
-      --ads-rail-width
-    );
+  grid-template-columns: var(--ads-rail-width) minmax(0, 1fr) var(--ads-rail-width);
 
   gap: var(--ads-layout-gap);
 
@@ -119,11 +117,11 @@
    LARGE DESKTOP
    ========================================================= */
 
-@media (min-width: 1600px) {
+/* @media (min-width: 1600px) {
   .ads-page-layout {
     max-width: 1600px;
   }
-}
+} */
 
 /* =========================================================
    TABLET / SMALL DESKTOP
